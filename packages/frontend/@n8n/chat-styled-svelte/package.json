@@ -2,16 +2,41 @@
   "name": "@n8n/chat-styled-svelte",
   "version": "0.1.0",
   "description": "Professional AI chat UI built on @n8n/chat-headless-svelte with modern design",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": {
+    "name": "n8n GmbH",
+    "email": "support@n8n.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n8n-io/n8n.git",
+    "directory": "packages/frontend/@n8n/chat-styled-svelte"
+  },
+  "homepage": "https://github.com/n8n-io/n8n/tree/master/packages/frontend/@n8n/chat-styled-svelte#readme",
+  "bugs": {
+    "url": "https://github.com/n8n-io/n8n/issues"
+  },
+  "keywords": [
+    "n8n",
+    "chat",
+    "svelte",
+    "styled",
+    "ai",
+    "chatbot",
+    "ui-component",
+    "workflow"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build && pnpm build:types",
+    "build": "vite build && npm run build:types",
     "build:types": "tsc --emitDeclarationOnly",
     "preview": "vite preview",
     "test": "vitest run",
     "test:dev": "vitest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src --quiet",
-    "lint:fix": "eslint src --fix"
+    "lint:fix": "eslint src --fix",
+    "prepublishOnly": "npm run build"
   },
   "types": "./dist/index.d.ts",
   "main": "./dist/chat-styled-svelte.umd.js",
@@ -34,18 +59,19 @@
     }
   },
   "dependencies": {
-    "@n8n/chat-headless-svelte": "workspace:*"
+    "@n8n/chat-headless-svelte": "^0.1.0"
   },
   "devDependencies": {
-    "@n8n/eslint-config": "workspace:*",
-    "@n8n/typescript-config": "workspace:*",
-    "@n8n/vitest-config": "workspace:*",
     "@sveltejs/vite-plugin-svelte": "^5.0.4",
     "@tsconfig/svelte": "^5.0.4",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "@vitest/coverage-v8": "3.2.4",
+    "eslint": "^9.0.0",
+    "eslint-plugin-svelte": "^2.46.0",
     "svelte": "^5.23.1",
     "typescript": "5.9.2",
-    "vite": "npm:rolldown-vite@latest",
+    "vite": "^6.0.0",
     "vitest": "^3.1.3"
   },
   "peerDependencies": {
@@ -53,6 +79,7 @@
   },
   "files": [
     "README.md",
+    "LICENSE.md",
     "dist"
   ]
 }

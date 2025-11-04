@@ -2,9 +2,33 @@
   "name": "@n8n/chat-headless-svelte",
   "version": "0.1.0",
   "description": "Headless Svelte chat library based on @n8n/chat with full styling control via snippets",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": {
+    "name": "n8n GmbH",
+    "email": "support@n8n.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n8n-io/n8n.git",
+    "directory": "packages/frontend/@n8n/chat-headless-svelte"
+  },
+  "homepage": "https://github.com/n8n-io/n8n/tree/master/packages/frontend/@n8n/chat-headless-svelte#readme",
+  "bugs": {
+    "url": "https://github.com/n8n-io/n8n/issues"
+  },
+  "keywords": [
+    "n8n",
+    "chat",
+    "svelte",
+    "headless",
+    "ai",
+    "chatbot",
+    "webhook",
+    "workflow"
+  ],
   "scripts": {
     "dev": "vite build --watch",
-    "build": "vite build && pnpm build:types",
+    "build": "vite build && npm run build:types",
     "build:types": "tsc --emitDeclarationOnly",
     "preview": "vite preview",
     "test": "vitest run",
@@ -13,7 +37,8 @@
     "lint": "eslint src --quiet",
     "lint:fix": "eslint src --fix",
     "format": "prettier --write src/",
-    "format:check": "prettier --check src/"
+    "format:check": "prettier --check src/",
+    "prepublishOnly": "npm run build"
   },
   "types": "./dist/index.d.ts",
   "main": "./dist/chat-headless-svelte.umd.js",
@@ -35,16 +60,20 @@
     "uuid": "10.0.0"
   },
   "devDependencies": {
-    "@n8n/eslint-config": "workspace:*",
-    "@n8n/typescript-config": "workspace:*",
-    "@n8n/vitest-config": "workspace:*",
     "@sveltejs/vite-plugin-svelte": "^5.0.4",
     "@tsconfig/svelte": "^5.0.4",
+    "@types/uuid": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "@vitest/coverage-v8": "3.2.4",
+    "eslint": "^9.0.0",
+    "eslint-plugin-svelte": "^2.46.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-svelte": "^3.0.0",
     "svelte": "^5.23.1",
     "svelte-check": "^4.1.1",
     "typescript": "5.9.2",
-    "vite": "npm:rolldown-vite@latest",
+    "vite": "^6.0.0",
     "vitest": "^3.1.3"
   },
   "peerDependencies": {
@@ -52,6 +81,7 @@
   },
   "files": [
     "README.md",
+    "LICENSE.md",
     "dist"
   ]
 }
