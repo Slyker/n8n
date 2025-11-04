@@ -264,7 +264,11 @@ npm run lint
 
 ## Publishing to NPM
 
-This package is designed to be published to NPM as a standalone package. To publish:
+This package is designed to be published to NPM as a standalone package.
+
+**Important:** This package depends on `@n8n/chat-headless-svelte`. Make sure the headless package is published to NPM first before publishing this styled package.
+
+To publish:
 
 1. **Update the version** in `package.json` following [semver](https://semver.org/):
    ```bash
