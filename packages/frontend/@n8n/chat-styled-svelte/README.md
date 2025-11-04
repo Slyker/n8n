@@ -240,9 +240,69 @@ You need:
 
 See the [n8n chat documentation](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/) for setting up your workflow.
 
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Build the library
+npm run build
+
+# Run in development mode
+npm run dev
+
+# Run tests
+npm test
+
+# Type check
+npm run typecheck
+
+# Lint code
+npm run lint
+```
+
+## Publishing to NPM
+
+This package is designed to be published to NPM as a standalone package. To publish:
+
+1. **Update the version** in `package.json` following [semver](https://semver.org/):
+   ```bash
+   npm version patch  # for bug fixes
+   npm version minor  # for new features
+   npm version major  # for breaking changes
+   ```
+
+2. **Build the package**:
+   ```bash
+   npm run build
+   ```
+
+3. **Publish to NPM**:
+   ```bash
+   npm publish --access public
+   ```
+
+   Note: You need to be logged in to npm (`npm login`) and have publish permissions for the `@n8n` scope.
+
+4. **Verify the publication**:
+   ```bash
+   npm info @n8n/chat-styled-svelte
+   ```
+
+### What Gets Published
+
+The NPM package includes:
+- `dist/` - Compiled JavaScript, CSS, and TypeScript declarations
+- `README.md` - Documentation
+- `LICENSE.md` - License information
+- `package.json` - Package metadata
+
+Everything else (source files, tests, demo, etc.) is excluded from the NPM package.
+
 ## License
 
-Same as n8n - see [LICENSE](https://github.com/n8n-io/n8n/blob/master/README.md#license)
+Same as n8n - see [LICENSE.md](./LICENSE.md)
 
 ## Related Packages
 

@@ -389,18 +389,59 @@ See the `examples/` directory for more examples:
 
 ```bash
 # Install dependencies
-pnpm install
+npm install
 
 # Build the library
-pnpm build
+npm run build
 
 # Run tests
-pnpm test
+npm test
 
 # Type check
-pnpm typecheck
+npm run typecheck
+
+# Lint code
+npm run lint
 ```
+
+## Publishing to NPM
+
+This package is designed to be published to NPM as a standalone package. To publish:
+
+1. **Update the version** in `package.json` following [semver](https://semver.org/):
+   ```bash
+   npm version patch  # for bug fixes
+   npm version minor  # for new features
+   npm version major  # for breaking changes
+   ```
+
+2. **Build the package**:
+   ```bash
+   npm run build
+   ```
+
+3. **Publish to NPM**:
+   ```bash
+   npm publish --access public
+   ```
+
+   Note: You need to be logged in to npm (`npm login`) and have publish permissions for the `@n8n` scope.
+
+4. **Verify the publication**:
+   ```bash
+   npm info @n8n/chat-headless-svelte
+   ```
+
+### What Gets Published
+
+The NPM package includes:
+- `dist/` - Compiled JavaScript and TypeScript declarations
+- `README.md` - Documentation
+- `LICENSE.md` - License information
+- `package.json` - Package metadata
+
+Everything else (source files, tests, examples, etc.) is excluded from the NPM package.
 
 ## License
 
-Same license as n8n - see [LICENSE](https://github.com/n8n-io/n8n/blob/master/README.md#license)
+Same license as n8n - see [LICENSE.md](./LICENSE.md)
