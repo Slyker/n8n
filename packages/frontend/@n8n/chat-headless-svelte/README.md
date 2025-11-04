@@ -22,11 +22,33 @@ For streaming responses, enable **Streaming response** in the Chat Trigger node.
 
 ## Installation
 
+### Option 1: From npm (when published)
+
 ```bash
 npm install @n8n/chat-headless-svelte
 # or
 pnpm add @n8n/chat-headless-svelte
 ```
+
+### Option 2: From Git (Current Method)
+
+Install directly from the GitHub repository:
+
+```bash
+pnpm add "git+https://github.com/Slyker/n8n.git#copilot/add-chat-library-import"
+```
+
+Or add to your `package.json`:
+
+```json
+{
+  "dependencies": {
+    "@n8n/chat-headless-svelte": "git+https://github.com/Slyker/n8n.git#copilot/add-chat-library-import"
+  }
+}
+```
+
+> 📖 **For more installation options** (workspace dependencies, local installation, etc.), see the comprehensive [IMPORT_GUIDE.md](./IMPORT_GUIDE.md).
 
 ## Usage
 
