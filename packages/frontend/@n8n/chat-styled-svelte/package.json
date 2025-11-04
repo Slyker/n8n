@@ -1,9 +1,9 @@
 {
-  "name": "@n8n/chat-headless-svelte",
+  "name": "@n8n/chat-styled-svelte",
   "version": "0.1.0",
-  "description": "Headless Svelte chat library based on @n8n/chat with full styling control via snippets",
+  "description": "Professional AI chat UI built on @n8n/chat-headless-svelte with modern design",
   "scripts": {
-    "dev": "vite build --watch",
+    "dev": "vite",
     "build": "vite build && pnpm build:types",
     "build:types": "tsc --emitDeclarationOnly",
     "preview": "vite preview",
@@ -11,20 +11,22 @@
     "test:dev": "vitest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src --quiet",
-    "lint:fix": "eslint src --fix",
-    "format": "prettier --write src/",
-    "format:check": "prettier --check src/"
+    "lint:fix": "eslint src --fix"
   },
   "types": "./dist/index.d.ts",
-  "main": "./dist/chat-headless-svelte.umd.js",
-  "module": "./dist/chat-headless-svelte.es.js",
+  "main": "./dist/chat-styled-svelte.umd.js",
+  "module": "./dist/chat-styled-svelte.es.js",
   "svelte": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js",
-      "import": "./dist/chat-headless-svelte.es.js",
-      "require": "./dist/chat-headless-svelte.umd.js"
+      "import": "./dist/chat-styled-svelte.es.js",
+      "require": "./dist/chat-styled-svelte.umd.js"
+    },
+    "./styles.css": {
+      "import": "./dist/styles.css",
+      "require": "./dist/styles.css"
     },
     "./*": {
       "import": "./*",
@@ -32,7 +34,7 @@
     }
   },
   "dependencies": {
-    "uuid": "10.0.0"
+    "@n8n/chat-headless-svelte": "workspace:*"
   },
   "devDependencies": {
     "@n8n/eslint-config": "workspace:*",
@@ -42,7 +44,6 @@
     "@tsconfig/svelte": "^5.0.4",
     "@vitest/coverage-v8": "3.2.4",
     "svelte": "^5.23.1",
-    "svelte-check": "^4.1.1",
     "typescript": "5.9.2",
     "vite": "npm:rolldown-vite@latest",
     "vitest": "^3.1.3"
