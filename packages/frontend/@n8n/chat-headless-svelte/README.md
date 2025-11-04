@@ -12,6 +12,14 @@ A headless Svelte chat library based on [@n8n/chat](../chat) with full styling c
 - 🎯 **TypeScript** - Fully typed with TypeScript
 - 🪶 **Lightweight** - Minimal dependencies, zero styling opinions
 
+## 📚 Documentation
+
+- **[STYLING_GUIDE.md](./STYLING_GUIDE.md)** - Complete guide to styling with headless components and Svelte 5 snippets
+- **[OPTIONS_GUIDE.md](./OPTIONS_GUIDE.md)** - Comprehensive ChatOptions configuration reference
+- **[IMPORT_GUIDE.md](./IMPORT_GUIDE.md)** - Installation methods and import strategies
+- **[QUICKSTART.md](./QUICKSTART.md)** - Quick start tutorial
+- **[ARCHITECTURE.md](./ARCHITECTURE.md)** - Technical architecture details
+
 ## Prerequisites
 
 Create an n8n workflow triggered by a **Chat Trigger** node. Add your domain to the **Allowed Origins (CORS)** field.
@@ -397,6 +405,34 @@ The `HeadlessChat` component provides access to the chat store through its child
 | Customization | CSS overrides | Complete control |
 | Bundle Size | Larger (includes Vue + styles) | Smaller (no styling) |
 | Use Case | Quick integration | Full design control |
+
+## 📖 Learn More
+
+### Essential Guides
+
+- **[STYLING_GUIDE.md](./STYLING_GUIDE.md)** - Everything about headless components and Svelte 5 snippets
+  - What "headless" means and why it's powerful
+  - Complete control over every pixel of your UI
+  - Examples with Tailwind, Bootstrap, Material Design, and custom CSS
+  - Responsive design patterns
+  - Theme switching
+  - Animation techniques
+
+- **[OPTIONS_GUIDE.md](./OPTIONS_GUIDE.md)** - Complete ChatOptions reference
+  - All configuration options explained in detail
+  - Real-world examples for every option
+  - Session management strategies
+  - File upload configuration
+  - Metadata and user tracking
+  - Authentication patterns
+  - Business hours and conditional features
+
+### Additional Resources
+
+- **[IMPORT_GUIDE.md](./IMPORT_GUIDE.md)** - 5 different ways to install and import
+- **[QUICKSTART.md](./QUICKSTART.md)** - Quick start tutorial
+- **[ARCHITECTURE.md](./ARCHITECTURE.md)** - Technical architecture details
+- **[COMPARISON.md](./COMPARISON.md)** - Detailed comparison with @n8n/chat
 
 ## Examples
 
